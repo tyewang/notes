@@ -61,3 +61,6 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
         self.assertNotIn('c', my_list)
         self.assertEqual(len(my_list), 2)
     ```
+
+## Commenting
+- Don't leave TODO comments in code. Track tasks in an appropriate task tracker instead.
