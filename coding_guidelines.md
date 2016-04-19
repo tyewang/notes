@@ -13,7 +13,7 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
   - The test file should be parallel to the module. This means if you are writing tests for `my_awesome_code.py`, put the tests in `test/test_my_awesome_code.py`
   - Test cases (the classes in the test file) should be used to organize tests into sections.
   - Tests (the functions in each class) should have descriptive names and should test a _single_ scenario.
-  - BAD:
+    * Bad:
     ```
     ListTest(TestCase):
 
@@ -33,7 +33,7 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
         self.assertNotIn('c', my_list)
         self.assertEqual(len(my_list), 2)
     ```
-  - GOOD:
+    * Good:
     ```
     AppendTest(TestCase):
 
@@ -61,6 +61,9 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
         self.assertNotIn('c', my_list)
         self.assertEqual(len(my_list), 2)
     ```
+  - Test names should be explicit and full sentences.
+    * Bad: `test_refund_already_refunded`
+    * Good: `test_refund_raises_error_when_already_refunded`
 
 ## Commenting
 - Don't leave TODO comments in code. Track tasks in an appropriate task tracker instead.
