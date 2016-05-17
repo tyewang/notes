@@ -7,6 +7,7 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
 - Don't call `_` functions outside of the module they are contained in. _This includes tests_.
 
 ## Testing
+- Use newlines to divide tests into three distinct sections: setups, actions, and assertions.
 - Don't mock or patch `_` functions in tests.
 - Don't test `_` functions.
 - If you are using `nosetests` or `UnitTest`, organize your tests as follows:
@@ -39,6 +40,7 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
 
       def test_appends_value_to_list(self):
         my_list = []
+
         my_list.append('a')
 
         self.assertIn('a', my_list)
@@ -48,7 +50,9 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
 
       def test_appends_elements_to_list(self):
         my_list = ['a']
+
         my_list.extend(['b', 'c'])
+
         self.assertIn('b', my_list)
         self.assertIn('c', my_list)
         self.assertEqual(len(my_list), 3)
@@ -57,7 +61,9 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
 
       def test_removes_value_from_list(self):
         my_list = ['a', 'b', 'c']
+
         my_list.remove('c')
+
         self.assertNotIn('c', my_list)
         self.assertEqual(len(my_list), 2)
     ```
