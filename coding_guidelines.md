@@ -14,7 +14,7 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
   - The test file should be parallel to the module. This means if you are writing tests for `services/my_awesome_code.py`, put the tests in `test/services/my_awesome_code_test.py`
   - Test cases (the classes in the test file) should be used to organize tests into sections. Usually, you will want have one test case per method/function that is being tested.
   - Tests (the functions in each class) should have descriptive names and should test a _single_ scenario.
-  - Test names should be explicit and full sentences. Test names should be in the format `test_<method name>_<action>_<situation>` or `test_<method name>_<situation>_<action>`. The method name can be left out if it is a repeat of the class name.
+  - Test names should be explicit and full sentences. Test names should be in the format `test_<method name>_<expectation>_<situation>` or `test_<method name>_<situation>_<expectation>`. The method name can be left out if it is a repeat of the class name. For example, if you're testing a function named `refund`:
     * Bad: `test_refund_already_refunded`
     * Good: `test_refund_raises_error_when_already_refunded`
 
