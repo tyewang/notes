@@ -4,6 +4,7 @@ Unlike PEP-8, these rules do not concern style or formatting. Instead, they are 
 
 ## General
 - Always prefix helper functions/methods with `_`
+  - A helper means that the only implementation that invokes it is in the same module or class it is contained in.
 - Don't call `_` functions outside of the module they are contained in. _This includes tests_.
 
 ## Testing
